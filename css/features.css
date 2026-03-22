@@ -1,0 +1,453 @@
+page-banner {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 2rem 1.75rem;
+  transition: background var(--transition);
+}
+
+.page-banner-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page-banner-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.page-banner-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.page-banner-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* ------------------------------------------------
+   TIMETABLE
+   ------------------------------------------------ */
+.tt-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.tt-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 99px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border: 1px solid var(--border);
+}
+
+.tt-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+  transition: background var(--transition);
+}
+
+.tt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 640px;
+}
+
+.tt th {
+  background: var(--bg-soft);
+  padding: 10px 10px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  transition: background var(--transition);
+}
+
+.tt th.today-head {
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+
+.tt td {
+  padding: 8px 7px;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  vertical-align: middle;
+  min-height: 52px;
+}
+
+.tt td.time-cell {
+  font-size: 11px;
+  color: var(--text-faint);
+  font-weight: 500;
+  background: var(--bg-soft);
+  text-align: right;
+  padding-right: 12px;
+  width: 90px;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+
+.tt tr:last-child td { border-bottom: none; }
+.tt td:last-child    { border-right: none; }
+
+.tt td.today-col { background: rgba(253,243,199,0.3); }
+#theme-toggle:checked ~ .site-wrap .tt td.today-col { background: rgba(58,40,0,0.3); }
+
+.tt td.break-cell {
+  background: var(--bg-soft2);
+  font-size: 11px;
+  color: var(--text-faint);
+  font-weight: 500;
+  font-style: italic;
+  transition: background var(--transition);
+}
+
+/* Legend */
+.tt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ------------------------------------------------
+   TO-DO LIST
+   ------------------------------------------------ */
+.todo-list {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition);
+}
+
+.todo-item {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+
+.todo-item:last-child { border-bottom: none; }
+.todo-item:hover { background: var(--bg-soft); }
+
+.todo-item input[type="checkbox"] { display: none; }
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-mid);
+  flex-shrink: 0;
+  position: relative;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.check-circle::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.todo-item input:checked + label .check-circle {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.todo-item input:checked + label .check-circle::after { opacity: 1; }
+
+.todo-item input:checked + label .todo-text {
+  text-decoration: line-through;
+  color: var(--text-faint);
+}
+
+.todo-text-wrap { flex: 1; }
+
+.todo-text {
+  font-size: 14px;
+  color: var(--text);
+  display: block;
+  transition: color var(--transition);
+}
+
+.todo-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.todo-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 11px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+.tag-high   { background: var(--fee-bg); color: var(--fee-text); }
+.tag-medium { background: var(--fcp-bg); color: var(--fcp-text); }
+.tag-low    { background: var(--dm-bg);  color: var(--dm-text);  }
+.tag-done   { background: var(--bg-soft2); color: var(--text-faint); }
+
+/* ------------------------------------------------
+   MOTIVATIONAL QUOTES
+   ------------------------------------------------ */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.quote-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.quote-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+.quote-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  font-family: 'Syne', serif;
+  font-size: 80px;
+  color: var(--accent-light);
+  line-height: 1;
+  pointer-events: none;
+  transition: color var(--transition);
+}
+
+.quote-card:hover::before { color: var(--accent-mid); }
+
+.quote-text {
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-author {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.quote-tag-pill {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  border: 1px solid var(--border);
+}
+
+/* Featured quote banner */
+.quote-featured {
+  background: var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-featured::before {
+  content: '\201C';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Syne', serif;
+  font-size: 160px;
+  color: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.quote-featured .qf-text {
+  font-family: 'DM Sans', sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #fff;
+  max-width: 640px;
+  margin: 0 auto 12px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.quote-featured .qf-author {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------------------
+   STUDY TIPS — Expandable Cards (CSS :focus trick)
+   ------------------------------------------------ */
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tip-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+/* Hidden checkbox for expand/collapse */
+.tip-toggle { display: none; }
+
+.tip-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background var(--transition);
+}
+
+.tip-header:hover { background: var(--bg-soft); }
+
+.tip-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.tip-toggle:checked + .tip-header .tip-icon-wrap { background: var(--accent); }
+
+.tip-title-text {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.tip-arrow {
+  font-size: 14px;
+  color: var(--text-faint);
+  transition: transform var(--transition);
+  display: inline-block;
+}
+
+.tip-toggle:checked + .tip-header .tip-arrow { transform: rotate(90deg); color: var(--accent); }
+
+.tip-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s ease;
+  padding: 0 1.25rem;
+}
+
+.tip-toggle:checked ~ .tip-body {
+  max-height: 400px;
+  padding: 0 1.25rem 1.25rem;
+}
+
+.tip-body p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.tip-card:has(.tip-toggle:checked) {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 640px) {
+  .quotes-grid { grid-template-columns: 1fr; }
+  .tt { font-size: 11px; }
+}
