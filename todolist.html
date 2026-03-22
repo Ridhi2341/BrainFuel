@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainFuel — To-Do List</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/features.css" />
+</head>
+<body>
+
+<input type="checkbox" id="theme-toggle" />
+
+<div class="site-wrap">
+
+  <label class="theme-toggle-label" for="theme-toggle">
+    <span class="icon-moon">🌙</span>
+    <span class="icon-sun">☀️</span>
+  </label>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">B</div>
+      BrainFuel
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hub.html">Hub</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+      <li><a href="todolist.html" class="active">To-Do</a></li>
+      <li><a href="quotes.html">Quotes</a></li>
+      <li><a href="studytips.html">Tips</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html" class="btn-nav-out">Log out</a>
+    </div>
+  </nav>
+
+  <div class="page-banner">
+    <div class="page-banner-inner">
+      <div class="page-banner-icon">✅</div>
+      <div>
+        <div class="page-banner-title">To-Do List</div>
+        <div class="page-banner-sub">Click a task to mark it done. Tick it off, feel good about it.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="section-header fade-up">
+        <h2 class="section-title">Current tasks</h2>
+      </div>
+
+      <div class="todo-list fade-up">
+
+        <div class="todo-item">
+          <input type="checkbox" id="t1" checked />
+          <label for="t1">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Read OS &amp; Linux — Chapter 3: Process Management</span>
+              <span class="todo-meta">OS &amp; Linux · Mr Sharanjit · Completed</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-done">Done</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t2" />
+          <label for="t2">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Submit FCP Lab Assignment — Functions &amp; Pointers</span>
+              <span class="todo-meta">FCP · Mr Anuj · Due tomorrow</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-high">High</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t3" />
+          <label for="t3">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Complete FAA assignment</span>
+              <span class="todo-meta">FAA · Gagandeep · Due in 2 days</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-high">High</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t4" />
+          <label for="t4">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Solve DM practice problems — Set Theory &amp; Relations</span>
+              <span class="todo-meta">DM · Dr Swati · Due in 3 days</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-medium">Medium</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t5" />
+          <label for="t5">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Revise FEE notes —JavaScript Basics</span>
+              <span class="todo-meta">FEE · Mr Yogendra · Before Friday</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-medium">Medium</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t6" />
+          <label for="t6">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Prepare for OS &amp; Linux mid-sem viva</span>
+              <span class="todo-meta">OS &amp; Linux · Mr Sharanjit · Due next week</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-medium">Medium</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t7" />
+          <label for="t7">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Write FCP program — Linked list implementation in C</span>
+              <span class="todo-meta">FCP · Mr Anuj · Due in 5 days</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-low">Low</span>
+        </div>
+
+        <div class="todo-item">
+          <input type="checkbox" id="t8" />
+          <label for="t8">
+            <span class="check-circle"></span>
+            <span class="todo-text-wrap">
+              <span class="todo-text">Read DM Chapter 5 — Graph Theory basics</span>
+              <span class="todo-meta">DM · Dr Swati · Whenever possible</span>
+            </span>
+          </label>
+          <span class="todo-tag tag-low">Low</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+      <span class="footer-copy">© 2026 BrainFuel </span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

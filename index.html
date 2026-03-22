@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BrainFuel — Study Smarter</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+<input type="checkbox" id="theme-toggle" />
+
+<div class="site-wrap">
+
+  <label class="theme-toggle-label" for="theme-toggle">
+    <span class="icon-moon">🌙</span>
+    <span class="icon-sun">☀️</span>
+  </label>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">B</div>
+      BrainFuel
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="hub.html">Features</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#login" class="btn-nav-out">Log in</a>
+      <a href="#signup" class="btn-nav-in">Sign up</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div>
+        <div class="hero-badge fade-up">
+          <span class="hero-badge-dot"></span>
+          Built for college students
+        </div>
+        <h1 class="hero-title fade-up">
+          Fuel your<br/><span>brain.</span><br/>Ace your sem.
+        </h1>
+        <p class="hero-desc fade-up">
+          BrainFuel is your all-in-one student utility hub — timetables, to-do lists, study tips, and motivation, all in one clean space. No distractions. Just focus.
+        </p>
+        <div class="hero-actions fade-up">
+          <a href="hub.html" class="btn-primary">Explore features →</a>
+          <a href="#" class="btn-secondary">Learn more</a>
+        </div>
+      </div>
+
+      <div class="hero-auth fade-up" id="login">
+
+        <input type="radio" name="auth-tab" id="tab-login" checked />
+        <input type="radio" name="auth-tab" id="tab-signup" />
+
+        <div class="auth-tabs">
+          <label class="tab-label" for="tab-login">Log in</label>
+          <label class="tab-label" for="tab-signup">Sign up</label>
+        </div>
+
+        <div class="auth-panels">
+
+          <div class="auth-panel panel-login">
+            <h2 class="auth-heading">Welcome back</h2>
+            <p class="auth-sub">Log in to your BrainFuel dashboard.</p>
+            <div class="form-group">
+              <label class="form-label" for="l-email">Email address</label>
+              <input class="form-input" type="email" id="l-email" placeholder="you@chitkara.edu.in" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="l-pw">Password</label>
+              <input class="form-input" type="password" id="l-pw" placeholder="Your password" required minlength="8" />
+            </div>
+            <div class="form-row">
+              <label class="remember-label">
+                <input type="checkbox" /> Remember me
+              </label>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+            <button class="btn-submit" type="button" onclick="window.location.href='hub.html'">Log in</button>
+            <div class="auth-divider">or</div>
+            <button class="btn-google" type="button">
+              <span class="google-dot"></span>
+              Continue with Google
+            </button>
+            <p class="auth-terms">
+              By logging in you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+
+          <div class="auth-panel panel-signup" id="signup">
+            <h2 class="auth-heading">Create account</h2>
+            <p class="auth-sub">Join BrainFuel — it's free for students.</p>
+            <div class="form-group">
+              <label class="form-label" for="s-name">Full name</label>
+              <input class="form-input" type="text" id="s-name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-email">University email</label>
+              <input class="form-input" type="email" id="s-email" placeholder="you@chitkara.edu.in" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-uni">University / College</label>
+              <input class="form-input" type="text" id="s-uni" placeholder="e.g. Chitkara University" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="s-pw">Password</label>
+              <input class="form-input" type="password" id="s-pw" placeholder="Min. 8 characters" required minlength="8" />
+            </div>
+            <button class="btn-submit" type="button" onclick="window.location.href='hub.html'">Create account</button>
+            <div class="auth-divider">or</div>
+            <button class="btn-google" type="button">
+              <span class="google-dot"></span>
+              Continue with Google
+            </button>
+            <p class="auth-terms">
+              By signing up you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="features-strip">
+    <div class="features-strip-inner">
+      <div class="strip-item">
+        <span class="strip-icon">📅</span>
+        <div class="strip-name">Timetable</div>
+        <div class="strip-desc">Your AIML-2-G10 schedule, colour coded by subject</div>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">✅</span>
+        <div class="strip-name">To-Do List</div>
+        <div class="strip-desc">Track assignments with priority tags</div>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">💬</span>
+        <div class="strip-name">Quotes</div>
+        <div class="strip-desc">Daily motivation to keep you going</div>
+      </div>
+      <div class="strip-item">
+        <span class="strip-icon">🧠</span>
+        <div class="strip-name">Study Tips</div>
+        <div class="strip-desc">Proven techniques for college students</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="enter-cta">
+    <h2>Ready to fuel your brain?</h2>
+    <p>Everything you need for a productive semester — in one place.</p>
+    <a href="hub.html" class="btn-primary">Go to my dashboard →</a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">BrainFuel</span>
+      <div class="footer-links">
+        <a href="hub.html">Hub</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="todolist.html">To-Do</a>
+        <a href="quotes.html">Quotes</a>
+        <a href="studytips.html">Tips</a>
+      </div>
+      <span class="footer-copy">© 2025 BrainFuel </span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
